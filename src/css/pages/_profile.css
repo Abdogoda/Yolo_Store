@@ -1,0 +1,76 @@
+.profile-container {
+  border-radius: 1rem;
+  background-color: var(--sbg-color);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-container .left {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.profile-img {
+  font-size: 4rem;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sign-links {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem auto;
+}
+.error .links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+/* login page */
+.login_form {
+  width: 30rem;
+  max-width: 90%;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.input-group {
+  width: 100%;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--main-color);
+}
+.input-group input,
+textarea {
+  background-color: transparent;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+.input-group input:focus,
+textarea:focus {
+  border-color: var(--main-color);
+}

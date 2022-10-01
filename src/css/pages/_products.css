@@ -1,0 +1,114 @@
+.products__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.products__filter {
+  width: 20%;
+}
+.products__content {
+  flex-grow: 1;
+}
+.products__filter__widget {
+  margin: 1rem 0;
+}
+.products__filter__widget__title {
+  font-weight: bold;
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 0.9rem;
+}
+.products__filter__widget__content {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.products__filter__widget__content .btn {
+  margin-top: 1rem;
+}
+.search__widget {
+  padding-right: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+}
+.search__widget input {
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  width: 100%;
+  height: 2rem;
+  padding-right: 0.5rem;
+  padding-left: 1.5rem;
+  border-radius: 0.1rem;
+  font-size: 00.8rem;
+  display: flex;
+  color: var(--stext-color);
+  align-items: center;
+  transition: var(--transition);
+}
+.search__widget input:focus {
+  border-color: var(--main-color);
+}
+.search__widget input:focus::placeholder {
+  opacity: 0;
+}
+.search__widget i {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  font-size: 0.8rem;
+  transform: translateY(-50%);
+  transition: var(--transition);
+  color: var(--main-color);
+}
+.products__filter__close {
+  display: none !important;
+  float: right;
+  margin-bottom: 1.5rem;
+}
+.products__filter__toggler {
+  display: none;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: calc(var(--header-height) + 20px);
+  left: 1rem;
+  transition: var(--transition);
+  font-size: 1.5rem;
+}
+.products__filter__toggler:hover {
+  color: var(--main-color);
+}
+@media screen and (max-width: 1230px) {
+  .products__content .grid__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .products__filter {
+    position: fixed;
+    height: 100vh;
+    width: 12rem;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    left: 0;
+    top: calc(var(--header-height));
+    z-index: 100;
+    box-shadow: var(--box-shadow);
+    transform: translateX(-100%);
+    transition: var(--transition);
+  }
+  .products__filter.active {
+    transform: translateX(0);
+  }
+  .products__filter__close {
+    display: block !important;
+  }
+  .products__filter__toggler {
+    display: block;
+  }
+}

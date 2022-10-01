@@ -1,0 +1,31 @@
+:root {
+  --bg-color: #fff;
+  --sbg-color: #ebf2ff;
+  --main-color: rgb(255, 97, 134);
+  --stext-color: #3d3d3d;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0rem 0.5rem 1.5rem;
+  --error-bg-color: rgb(255, 227, 234);
+  --lightseagreen-color: lightseagreen;
+  --orange-color: orange;
+  --lightcoral-color: lightcoral;
+  --pink-color: pink;
+  --white-color: white;
+  --black-color: black;
+  --red-color: red;
+  --container-width: 80%;
+  --container-tablet-width: 87.5%;
+  --container-mobile-width: 95%;
+  --header-height: 5rem;
+  --transition: all 0.3s ease;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--stext-color);
+}
+body.dark {
+  --box-shadow: rgba(0, 0, 0, 0.2) 0rem 0.5rem 1.5rem;
+  --bg-color: #0e1f40 !important;
+  --sbg-color: #112446 !important;
+  --stext-color: #eee !important;
+  --error-bg-color: rgb(114, 34, 54) !important;
+}

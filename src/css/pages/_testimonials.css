@@ -1,0 +1,71 @@
+.testimonials__con {
+  position: relative;
+}
+.testimonials_container {
+  width: 500px;
+  max-width: 95%;
+  margin-bottom: 4rem;
+}
+.testimonials_container .testimonial {
+  height: auto;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: var(--sbg-color);
+  padding: 1.5rem 3rem;
+  border-radius: 0 2rem 0 2rem;
+  transition: var(--transition);
+}
+.testimonials_container .testimonial:hover {
+  border-color: var(--main-color);
+}
+.testimonials_container .testimonial:hover .client_name {
+  letter-spacing: 2px;
+}
+.testimonial .client_name {
+  margin: 0.8rem;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+.testimonial:hover .client_name {
+  color: var(--main-color);
+}
+.testimonial .client_review {
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+.testimonial .social__icons {
+  margin-top: 2rem;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 0.8rem !important;
+  font-weight: bold;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--black-color);
+  background-color: var(--bg-color);
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 50%;
+  transition: var(--transition);
+  top: 93%;
+  right: 2px !important;
+}
+.swiper-button-prev {
+  left: 2px !important;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: var(--white-color);
+  background-color: var(--main-color);
+}
+.swiper-backface-hidden .swiper-slide {
+  transform: translateZ(0);
+  backface-visibility: visible;
+}
+.circle-5 {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}

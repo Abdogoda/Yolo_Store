@@ -1,0 +1,135 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  height: var(--header-height);
+}
+header .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--main-color);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+header .nav__toggle {
+  display: none;
+  transition: var(--transition);
+  font-size: 1.2rem;
+}
+header .nav__toggle:hover,
+header .nav__toggle.active {
+  color: var(--main-color);
+}
+header .header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.header__nav__link {
+  transition: var(--transition);
+}
+.header__nav__link:hover {
+  color: var(--main-color);
+}
+
+.header__nav__link.active {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.header__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.header__icons div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__icons div,
+.header__icons a {
+  font-size: 1.3rem;
+  color: var(--stext-color);
+  transition: var(--transition);
+}
+.header__icons div:hover,
+.header__icons a:hover {
+  color: var(--main-color);
+}
+.header__shopping__cart__icon {
+  position: relative;
+}
+.header__shopping__cart__icon span {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+.header__profile__icon i.userFound {
+  color: var(--main-color);
+}
+@media screen and (max-width: 772px) {
+  header .nav__toggle {
+    display: block;
+  }
+  header .header__nav {
+    display: none;
+    position: absolute;
+    align-items: flex-start;
+    top: calc(100% + 30px);
+    left: 0;
+    width: 100%;
+    z-index: 110;
+    gap: 0;
+    flex-direction: column;
+  }
+  header .header__nav__link {
+    background-color: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    padding: 0.7rem;
+    animation: links 0.3s ease-in-out;
+  }
+  header .header__nav__link:hover {
+    background-color: var(--sbg-color);
+  }
+  @keyframes links {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  header .header__nav.active {
+    display: flex;
+  }
+}
